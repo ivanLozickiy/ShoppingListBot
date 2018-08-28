@@ -164,6 +164,18 @@
     <Compile Include="Migrations\201808271724295_Initial.Designer.cs">
       <DependentUpon>201808271724295_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808281612082_ShopListChange.cs" />
+    <Compile Include="Migrations\201808281612082_ShopListChange.Designer.cs">
+      <DependentUpon>201808281612082_ShopListChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808281701453_anotherShopList.cs" />
+    <Compile Include="Migrations\201808281701453_anotherShopList.Designer.cs">
+      <DependentUpon>201808281701453_anotherShopList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808281718592_ShopListModelChange.cs" />
+    <Compile Include="Migrations\201808281718592_ShopListModelChange.Designer.cs">
+      <DependentUpon>201808281718592_ShopListModelChange.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppSettings.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -265,6 +277,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808271724295_Initial.resx">
       <DependentUpon>201808271724295_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808281612082_ShopListChange.resx">
+      <DependentUpon>201808281612082_ShopListChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808281701453_anotherShopList.resx">
+      <DependentUpon>201808281701453_anotherShopList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808281718592_ShopListModelChange.resx">
+      <DependentUpon>201808281718592_ShopListModelChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
