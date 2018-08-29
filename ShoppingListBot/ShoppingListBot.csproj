@@ -176,6 +176,14 @@
     <Compile Include="Migrations\201808281718592_ShopListModelChange.Designer.cs">
       <DependentUpon>201808281718592_ShopListModelChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808281753490_ShopListModelChangeToList.cs" />
+    <Compile Include="Migrations\201808281753490_ShopListModelChangeToList.Designer.cs">
+      <DependentUpon>201808281753490_ShopListModelChangeToList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808282109260_AddNewModel.cs" />
+    <Compile Include="Migrations\201808282109260_AddNewModel.Designer.cs">
+      <DependentUpon>201808282109260_AddNewModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AppSettings.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -213,6 +221,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Bot.cs" />
+    <Compile Include="Models\BuyItem.cs" />
     <Compile Include="Models\Commands\AddItemCommand.cs" />
     <Compile Include="Models\Commands\AddListCommand.cs" />
     <Compile Include="Models\Commands\Command.cs" />
@@ -286,6 +295,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808281718592_ShopListModelChange.resx">
       <DependentUpon>201808281718592_ShopListModelChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808281753490_ShopListModelChangeToList.resx">
+      <DependentUpon>201808281753490_ShopListModelChangeToList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808282109260_AddNewModel.resx">
+      <DependentUpon>201808282109260_AddNewModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

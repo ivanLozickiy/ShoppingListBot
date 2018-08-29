@@ -6,6 +6,7 @@ namespace ShoppingListBot.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<ShopList> ShopLists { get; set; }
+        public DbSet<BuyItem> BuyItems { get; set; }
         public ShoppingListContext() : base("ShopLists") { }
     }
 }
