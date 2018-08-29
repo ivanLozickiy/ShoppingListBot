@@ -17,7 +17,7 @@ namespace ShoppingListBot.Models.Commands
             var chatId = message.Chat.Id;
             string nameOfList = message.Text.Replace(@"/addlist", "").Trim();
             ShoppingListContext context = new ShoppingListContext();
-            ShopList shopList = context.ShopLists.FirstOrDefault(s => s.NameOfList == nameOfList);
+            ShopList shopList = context.ShopLists.Where(s => s.User.UserTelegramId == message.From.Id).FirstOrDefault(s => s.NameOfList == nameOfList);
             if (shopList != null)
             {
                 await botClient.SendTextMessageAsync(chatId, "List with that name already exist, choose another name.");

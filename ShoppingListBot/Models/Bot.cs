@@ -25,6 +25,7 @@ namespace ShoppingListBot.Models
             commands.Add(new HelpCommand());
             commands.Add(new AddListCommand());
             commands.Add(new AddItemCommand());
+            commands.Add(new RemoveListCommand());
             // add new commands
             botClient = new TelegramBotClient(AppSettings.Key);
             string hook = AppSettings.Url + "/api/message/update";

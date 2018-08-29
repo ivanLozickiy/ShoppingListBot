@@ -16,7 +16,7 @@ namespace ShoppingListBot.Models.Commands
         {
             ShoppingListContext context = new ShoppingListContext();
             string listName = GetListName(message.Text);
-            ShopList shopList = context.ShopLists.FirstOrDefault(s => s.NameOfList == listName);
+            ShopList shopList = context.ShopLists.Where(s => s.User.UserTelegramId == message.From.Id).FirstOrDefault(s => s.NameOfList == listName);
             if (shopList == null)
             {
                 await botClient.SendTextMessageAsync(message.Chat.Id, "There's no such list");
@@ -24,7 +24,7 @@ namespace ShoppingListBot.Models.Commands
             }
             foreach (string i in GetItems(message.Text))
             {
-                if (context.BuyItems.FirstOrDefault(b => b.Item == i) != null)
+                if (context.BuyItems.Where(b => b.ShopListId == shopList.ShopListId).FirstOrDefault(b => b.Item == i) != null)
                 {
                     await botClient.SendTextMessageAsync(message.Chat.Id, i + " already in list.");
                     continue;
@@ -48,6 +48,7 @@ namespace ShoppingListBot.Models.Commands
             string[] arr = str.Replace("/additem to " + GetListName(str), "").Split(',');
             for (int i = 0; i < arr.Length; i++)
                 arr[i] = arr[i].Trim();
+            arr = arr.Where(val => val != "").Where(val => val != " ").ToArray();
             return arr;
         }
     }
