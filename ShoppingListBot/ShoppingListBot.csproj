@@ -226,6 +226,7 @@
     <Compile Include="Models\Commands\AddListCommand.cs" />
     <Compile Include="Models\Commands\Command.cs" />
     <Compile Include="Models\Commands\HelpCommand.cs" />
+    <Compile Include="Models\Commands\RemoveItemCommand.cs" />
     <Compile Include="Models\Commands\RemoveListCommand.cs" />
     <Compile Include="Models\Commands\StartCommand.cs" />
     <Compile Include="Models\ShopList.cs" />
