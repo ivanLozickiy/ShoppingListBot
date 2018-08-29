@@ -228,6 +228,8 @@
     <Compile Include="Models\Commands\HelpCommand.cs" />
     <Compile Include="Models\Commands\RemoveItemCommand.cs" />
     <Compile Include="Models\Commands\RemoveListCommand.cs" />
+    <Compile Include="Models\Commands\ShowItemsCommand.cs" />
+    <Compile Include="Models\Commands\ShowListsCommand.cs" />
     <Compile Include="Models\Commands\StartCommand.cs" />
     <Compile Include="Models\ShopList.cs" />
     <Compile Include="Models\ShoppingListContext.cs" />
